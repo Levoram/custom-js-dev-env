@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "Javascript Development Environment: Setup Development faster",
   "scripts": {
+    "prestart": "node ./buildScripts/startMessage.js",
     "start":"node ./buildScripts/srcServer.js"
   },
   "author": "Nico Kuechler",
