@@ -3,8 +3,11 @@
   "version": "1.0.0",
   "description": "Javascript Development Environment: Setup Development faster",
   "scripts": {
-    "prestart": "node ./buildScripts/startMessage.js",
-    "start":"node ./buildScripts/srcServer.js"
+    "prestart": "babel-node ./buildScripts/startMessage.js",
+    "start":"npm-run-all --parallel open:src security-check",
+    "open:src":"babel-node ./buildScripts/srcServer.js",
+    "security-check":"npm audit",
+    "share":"lt --port 3000"
   },
   "author": "Nico Kuechler",
   "license": "MIT",

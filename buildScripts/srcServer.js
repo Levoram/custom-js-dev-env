@@ -1,11 +1,14 @@
-"use strict";
+import express from 'express';
+import path from 'path';
+import open from 'open';
 
-let express = require('express');
-let path = require('path');
-let open = require('open');
+const port = 3000;
+const app = express();
 
-let port = 3000;
-let app = express();
+app.use(require('webpack-dev-middleware')(compiler,{
+noInfo:true,
+publicPath: config.output.publicPath
+}));
 
 //Serving files from filesystem
 app.get('/', function (req, res){
