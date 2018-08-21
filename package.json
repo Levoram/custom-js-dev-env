@@ -2,7 +2,9 @@
   "name": "custom-javascript-development-environment",
   "version": "1.0.0",
   "description": "Javascript Development Environment: Setup Development faster",
-  "scripts": {},
+  "scripts": {
+    "start":"node ./buildScripts/srcServer.js"
+  },
   "author": "Nico Kuechler",
   "license": "MIT",
   "dependencies": {
