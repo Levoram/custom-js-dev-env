@@ -1,30 +1,38 @@
+import webpack from 'webpack';
 import path from 'path';
 import HtmlWebpackPlugin from 'html-webpack-plugin';
 
 export default {
-  debug: true,
+  resolve: {
+    extensions: ['*', '.js', '.jsx', '.json']
+  },
   devtool: 'inline-source-map',
-  noInfo: false,
+
   entry: [
     path.resolve(__dirname, 'src/index')
   ],
   target: 'web',
-  output: {
-    path: path.resolve(__dirname, 'src'),
+  output:{
+    path: path.resolve(__dirname,'src'),
     publicPath: '/',
-    filename: 'bundle.js'
+    filename:'bundle.js'
   },
   plugins: [
-    // Create HTML file that includes reference to bundled JS.
+    new webpack.LoaderOptionsPlugin({
+      minimize: false,
+      debug: true,
+      noInfo: true // set to false to see list of bundled files
+    }),
+    //Creation of HTML that has injected JS bundel
     new HtmlWebpackPlugin({
       template: 'src/index.html',
       inject: true
     })
   ],
   module: {
-    loaders: [
-      {test: /\.js$/, exclude: /node_modules/, loaders: ['babel']},
-      {test: /\.css$/, loaders: ['style','css']}
+    rules: [
+      {test: /\.js$/, exclude: /node_modules/, loader: 'babel-loader'},
+      {test: /\.css$/, use: ['style-loader','css-loader']}
     ]
   }
 }

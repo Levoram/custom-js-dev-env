@@ -1,4 +1,4 @@
-# Javascript Development Environment: Setup Development faster
+# Javascript Development Environment: <br> Setup Development faster
 This is a generic Javascript development environment. 
 
 ## Get Started
@@ -8,3 +8,4 @@ This is a generic Javascript development environment.
 3. Make sure that you are in the dir you created - `cd custom-js-dev-env` 
 4. Install nessesary packages by running - `npm install`
 5. ⏱ Wait while the entire internet is downloaded.
+6. Make sure everything works out as expected by hitting `npm start -s`
