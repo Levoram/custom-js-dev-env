@@ -1,5 +1,6 @@
-# Javascript Development Environment: <br> Setup Development faster
-This is a generic Javascript development environment. 
+# Javascript Development Environment: <br> Setup Development faster 
+This is a generic Javascript development environment.   
+[![Build Status](https://travis-ci.org/Levoram/custom-js-dev-env.svg?branch=master)](https://travis-ci.org/Levoram/custom-js-dev-env)
 
 ## Get Started
 
@@ -9,3 +10,5 @@ This is a generic Javascript development environment.
 4. Install nessesary packages by running - `npm install`
 5. ⏱ Wait while the entire internet is downloaded.
 6. Make sure everything works out as expected by hitting `npm start -s`
+
+
