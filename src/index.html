@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="de">
+<html lang="en">
 <head>
  <!--
     The htmlWebpackPlugin will parse the logic below so that trackJS is only added to the production version of index.html (since only webpack.config.prod.js provides the trackJS token)
@@ -18,18 +18,17 @@
   <title>Start from here..</title>
 </head>
 <body>
-  <h1>Hello World!</h1>
-  <h2>Users Api Example for fetching data from an api</h2>
+  <h1>Users Api Example: Fetching data from an api</h1>
   <table>
     <thead>
-      <th>&nbsp;</th>
       <th>Id</th>
       <th>First Name</th>
       <th>Last Name</th>
       <th>Email</th>
+      <th>&nbsp;</th>
     </thead>
     <tbody id="users">
-
+       <!-- Populated by getUsers() index.js -->
     </tbody>
     <sript src="bundle.js"></sript>
   </table>
