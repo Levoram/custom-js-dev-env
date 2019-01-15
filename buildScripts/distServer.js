@@ -1,9 +1,8 @@
 import express from 'express';
 import path from 'path';
-import favicon from 'serve-favicon';
 import open from 'open';
-import webpack from 'webpack';
-import config from '../webpack.config.dev';
+import compression from 'compression';
+import favicon from 'serve-favicon';
 
 
 /* eslint-disable no-console */
@@ -12,24 +11,19 @@ import config from '../webpack.config.dev';
 const port = 3000;
 const app = express();
 
-//Webpack configuration
-const compiler = webpack(config);
-
-app.use(require('webpack-dev-middleware')(compiler, {
-  noInfo: true,
-  publicPath: config.output.publicPath
-}));
-
-//  Serve a static directory
-app.use(express.static(path.join(__dirname, '../','src','public')));
-app.use(favicon(path.join(__dirname,  '../','src','public', 'images', 'favicon.ico')));
+app.use(express.static('dist'));
+app.use(compression());
 
 //Serving static files from filesystem on root
 app.get('/', function (req, res) {
-  res.sendFile(path.join(__dirname, '../src/index.html'));
+  res.sendFile(path.join(__dirname, '../','dist','index.html'));
 });
 
-//Creating a simple user inmemory userdb.json. This part is faking production datasource.
+//  Serve a static directory
+app.use(express.static(path.join(__dirname,'../','dist','images')));
+app.use(favicon(path.join(__dirname, '../','dist','images','favicon.ico')));
+
+//Creating a simple user inmemory userdb.json for testing.
 app.get('/users', function(req, res){
   res.json([
     {"id":"1", "firstName":"John", "lastName":"Doe", "email":"john.doe@gmail.com"},
