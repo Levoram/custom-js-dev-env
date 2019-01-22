@@ -1,7 +1,7 @@
 # Javascript Development Environment: <br> Setup Development faster 
 This is a generic Javascript development environment.   
 [![Build Status](https://travis-ci.org/Levoram/custom-js-dev-env.svg?branch=master)](https://travis-ci.org/Levoram/custom-js-dev-env)
-
+[![Build Status](https://ci.appveyor.com/api/projects/status/1q8x0si4054u15cj/branch/master?svg=true)](https://ci.appveyor.com/project/Levoram/custom-js-dev-env)
 ## Get Started
 
 1. To get this going you need to have [NodeJs](https://nodejs.org) up and running.
