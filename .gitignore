@@ -108,3 +108,7 @@ dist
 .Trashes
 ehthumbs.db
 Thumbs.db
+
+# Editor specific settings #
+############################
+.vscode/
