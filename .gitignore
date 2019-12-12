@@ -17,6 +17,9 @@ lib-cov
 # Coverage directory used by tools like istanbul
 coverage
 
+#mock db
+db.json
+
 # nyc test coverage
 .nyc_output
 
