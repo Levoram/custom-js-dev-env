@@ -1,8 +1,10 @@
 import express from 'express';
 import path from 'path';
+import favicon from 'serve-favicon';
 import open from 'open';
 import webpack from 'webpack';
 import config from '../webpack.config.dev';
+
 
 /* eslint-disable no-console */
 
@@ -17,6 +19,10 @@ app.use(require('webpack-dev-middleware')(compiler, {
   noInfo: true,
   publicPath: config.output.publicPath
 }));
+
+//  Serve a static directory
+app.use(express.static(path.join(__dirname, '../','src','public')));
+app.use(favicon(path.join(__dirname,  '../','src','public', 'images', 'favicon.ico')));
 
 //Serving static files from filesystem on root
 app.get('/', function (req, res) {

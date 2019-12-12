@@ -39,6 +39,9 @@ build/Release
 node_modules/
 jspm_packages/
 
+# Do not commit unnessesary images
+**/public/images/*.png
+
 # TypeScript v1 declaration files
 typings/
 
@@ -54,6 +57,9 @@ typings/
 # Output of 'npm pack'
 *.tgz
 
+#prod build
+dist
+
 # Yarn Integrity file
 .yarn-integrity
 
@@ -62,7 +68,6 @@ typings/
 
 # next.js build output
 .next
-package-lock.json
 
 ## Some more general stuff to ignore
 
