@@ -1,15 +1,16 @@
 {
-  "presets": [
-    "@babel/preset-env"
-  ],
+  "presets": ["@babel/preset-env"],
   "env": {
     "production": {
       "presets": [
-        ["@babel/preset-env", {
-          "targets": {
-            "esmodules": true
+        [
+          "@babel/preset-env",
+          {
+            "targets": {
+              "esmodules": true
+            }
           }
-        }]
+        ]
       ]
     }
   }

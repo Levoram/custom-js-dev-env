@@ -1,24 +1,24 @@
-import './index.css';
+import "./index.css";
 
-import {getUsers, deleteUser} from './api/userApi';
+import { getUsers, deleteUser } from "./api/userApi";
 
 // Populate table of users via API call.
 getUsers().then(result => {
   let usersBody = "";
 
   result.forEach(user => {
-    usersBody+= `<tr>
+    usersBody += `<tr>
       <td>${user.id}</td>
       <td>${user.firstName}</td>
       <td>${user.lastName}</td>
       <td>${user.email}</td>
       <td><a href="#" data-id="${user.id}" class="deleteUser">Delete</a></td>
-      </tr>`
+      </tr>`;
   });
 
-  global.document.getElementById('users').innerHTML = usersBody;
+  global.document.getElementById("users").innerHTML = usersBody;
 
-  const deleteLinks = global.document.getElementsByClassName('deleteUser');
+  const deleteLinks = global.document.getElementsByClassName("deleteUser");
 
   // Must use array.from to create a real array from a DOM collection
   // getElementsByClassname only returns an "array like" object
