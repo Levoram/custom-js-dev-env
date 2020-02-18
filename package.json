@@ -1,6 +1,6 @@
 {
   "name": "custom-javascript-development-environment",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Javascript Development Environment: Setup Development faster",
   "scripts": {
     "prestart": "babel-node buildScripts/startMessage.js",
