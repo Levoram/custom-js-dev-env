@@ -13,4 +13,4 @@ This is a generic Javascript development environment.
 5. ⏱ Wait while the entire internet is downloaded.
 6. Make sure everything works out as expected by hitting `npm start -s`
 7. Should run now
-8. test
+
