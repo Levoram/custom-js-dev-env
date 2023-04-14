@@ -1,4 +1,4 @@
-export const schema = {
+const schema = {
   type: "object",
   properties: {
     users: {
@@ -12,24 +12,26 @@ export const schema = {
             type: "integer",
             unique: true,
             minimum: 1,
-            maximum: 700
+            maximum: 700,
           },
           firstName: {
             type: "string",
-            faker: "name.firstName"
+            faker: "name.firstName",
           },
           lastName: {
             type: "string",
-            faker: "name.lastName"
+            faker: "name.lastName",
           },
           email: {
             type: "string",
-            faker: "internet.email"
-          }
+            faker: "internet.email",
+          },
         },
-        required: ["id", "firstName", "lastName", "email"]
-      }
-    }
+        required: ["id", "firstName", "lastName", "email"],
+      },
+    },
   },
-  required: ["users"]
+  required: ["users"],
 };
+
+export { schema };

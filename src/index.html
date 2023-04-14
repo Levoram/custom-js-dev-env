@@ -9,7 +9,7 @@
     <!-- BEGIN TRACKJS -->
     <script type="text/javascript">
       window._trackJs = {
-        token: "<%=htmlWebpackPlugin.options.trackJSToken%>"
+        token: "<%=htmlWebpackPlugin.options.trackJSToken%>",
       };
     </script>
     <script
@@ -107,7 +107,7 @@
   </head>
   <body>
     <h1>Users Api Example: Fetching data from an api</h1>
-    <table>
+    <table id="usertable">
       <thead>
         <th>Id</th>
         <th>First Name</th>
