@@ -55,7 +55,7 @@
     "faker": "^5.5.3",
     "html-webpack-plugin": "^5.3.2",
     "jsdom": "^21.1.1",
-    "json-schema-faker": "^0.5.0-rcv.46",
+    "json-schema-faker": "^0.5.8",
     "json-server": "^0.17.2",
     "localtunnel": "^2.0.2",
     "mini-css-extract-plugin": "^2.7.5",
