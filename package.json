@@ -28,6 +28,7 @@
     "url": "git://github.com/Levoram/custom-js-dev-env"
   },
   "dependencies": {
+    "custom-javascript-development-environment": "file:",
     "whatwg-fetch": "^3.6.2"
   },
   "devDependencies": {
