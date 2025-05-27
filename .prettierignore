@@ -1,6 +1,7 @@
 # Ignore files that Prettier can't parse
 .gitattributes
 .gitignore
+.prettierrc
 LICENSE
 *.log
 node_modules/
