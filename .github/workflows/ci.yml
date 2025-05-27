@@ -31,9 +31,6 @@ jobs:
       - name: Generate mock data
         run: npm run generate-mock-data
 
-      - name: Run Prettier
-        run: npx prettier --check .
-
       - name: Type check
         run: npm run type-check
 

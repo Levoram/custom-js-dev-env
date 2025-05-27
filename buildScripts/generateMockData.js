@@ -14,7 +14,7 @@ import chalk from 'chalk'
 // With latest version of json-schema-faker, must explicitly extend JSF with the fake libs you want to use.
 jsf.extend('faker', () => faker)
 
-const json = JSON.stringify(jsf.generate(schema))
+const json = JSON.stringify(jsf.generate(schema), null, 2)
 
 fs.writeFile('./src/api/db.json', json, function (err) {
   if (err) {

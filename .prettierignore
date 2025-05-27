@@ -1,0 +1,12 @@
+# Ignore files that Prettier can't parse
+.gitattributes
+.gitignore
+LICENSE
+*.log
+node_modules/
+dist/
+coverage/
+*.min.js
+*.bundle.js
+# Generated mock data
+src/api/db.json
