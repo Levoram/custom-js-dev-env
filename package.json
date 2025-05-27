@@ -33,6 +33,7 @@
     "whatwg-fetch": "^3.6.2"
   },
   "devDependencies": {
+    "@apidevtools/json-schema-ref-parser": "^12.0.2",
     "@eslint/js": "^9.27.0",
     "@faker-js/faker": "^9.8.0",
     "@types/node": "^22.15.21",
@@ -47,8 +48,8 @@
     "eslint": "^9.27.0",
     "eslint-plugin-import": "^2.27.5",
     "espree": "^9.5.0",
-    "jsdom": "^21.1.2",
-    "json-schema-faker": "^0.5.0-rcv.46",
+    "jsdom": "^25.0.1",
+    "json-schema-faker": "^0.5.9",
     "json-server": "^0.17.2",
     "npm-run-all": "4.1.5",
     "numeral": "2.0.6",

@@ -9,10 +9,11 @@ on:
 jobs:
   test:
     runs-on: ${{ matrix.os }}
+    timeout-minutes: 15
     strategy:
       matrix:
         os: [ubuntu-latest, windows-latest, macos-latest]
-        node-version: [18, 20, 22]
+        node-version: [20, 22, 24]
 
     steps:
       - name: Checkout code
@@ -25,7 +26,7 @@ jobs:
           cache: 'npm'
 
       - name: Install dependencies
-        run: npm ci
+        run: npm ci --no-fund --no-audit
 
       - name: Generate mock data
         run: npm run generate-mock-data
@@ -54,6 +55,7 @@ jobs:
 
   security:
     runs-on: ubuntu-latest
+    timeout-minutes: 10
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
@@ -65,7 +67,7 @@ jobs:
           cache: 'npm'
 
       - name: Install dependencies
-        run: npm ci
+        run: npm ci --no-fund --no-audit
 
       - name: Run security audit
         run: npm audit --audit-level moderate

@@ -4,7 +4,7 @@ A modernized JavaScript development environment featuring **Vite**, **TypeScript
 
 [![CI/CD Pipeline](https://github.com/Levoram/custom-js-dev-env/actions/workflows/ci.yml/badge.svg)](https://github.com/Levoram/custom-js-dev-env/actions/workflows/ci.yml)
 [![Build Status](https://ci.appveyor.com/api/projects/status/1q8x0si4054u15cj/branch/master?svg=true)](https://ci.appveyor.com/project/Levoram/custom-js-dev-env)
-[![Node.js Version](https://img.shields.io/badge/node-%3E%3D18-brightgreen.svg)](https://nodejs.org/)
+[![Node.js Version](https://img.shields.io/badge/node-%3E%3D20-brightgreen.svg)](https://nodejs.org/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 ## ✨ Features
@@ -19,7 +19,7 @@ A modernized JavaScript development environment featuring **Vite**, **TypeScript
 
 ## 🚀 Quick Start
 
-1. **Prerequisites**: Install [Node.js](https://nodejs.org) (v18+ recommended)
+1. **Prerequisites**: Install [Node.js](https://nodejs.org) (v20+ recommended)
 2. **Clone**: `git clone https://github.com/Levoram/custom-js-dev-env.git`
 3. **Navigate**: `cd custom-js-dev-env`
 4. **Install**: `npm install`
@@ -133,14 +133,14 @@ This project includes comprehensive CI/CD pipelines that run on multiple platfor
 ### GitHub Actions (Primary CI/CD)
 
 - **Cross-platform testing**: Ubuntu, Windows, macOS
-- **Multi-version support**: Node.js 18, 20, 22
+- **Multi-version support**: Node.js 20, 22, 24
 - **Complete workflow**: Type checking, linting, formatting, testing, building
 - **Security audits**: Automated vulnerability scanning
 - **Coverage reporting**: Integration with Codecov
 
 ### Legacy CI Support
 
-- **AppVeyor**: Windows builds with Node.js 18, 20, 22
+- **AppVeyor**: Windows builds with Node.js 22, 24
 
 ### CI Pipeline Steps
 

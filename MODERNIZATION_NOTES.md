@@ -33,7 +33,7 @@ The following build scripts were removed during the migration from Webpack to Vi
 ### CI Pipeline Improvements:
 
 - **Multi-platform testing**: Ubuntu, Windows, macOS (GitHub Actions)
-- **Multi-version testing**: Node.js 18, 20, 22 across remaining CI providers
+- **Multi-version testing**: Node.js 20, 22, 24 across remaining CI providers
 - **Enhanced checks**: Type checking, linting, formatting, security audits
 - **Build verification**: Ensures production builds work correctly
 - **Coverage reporting**: Integrated with modern coverage tools
