@@ -3,7 +3,6 @@
 A modernized JavaScript development environment featuring **Vite**, **TypeScript**, **Vitest**, and modern tooling for blazing-fast development.
 
 [![CI/CD Pipeline](https://github.com/Levoram/custom-js-dev-env/actions/workflows/ci.yml/badge.svg)](https://github.com/Levoram/custom-js-dev-env/actions/workflows/ci.yml)
-[![Build Status](https://travis-ci.org/Levoram/custom-js-dev-env.svg?branch=master)](https://travis-ci.org/Levoram/custom-js-dev-env)
 [![Build Status](https://ci.appveyor.com/api/projects/status/1q8x0si4054u15cj/branch/master?svg=true)](https://ci.appveyor.com/project/Levoram/custom-js-dev-env)
 [![Node.js Version](https://img.shields.io/badge/node-%3E%3D18-brightgreen.svg)](https://nodejs.org/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
@@ -79,7 +78,6 @@ A modernized JavaScript development environment featuring **Vite**, **TypeScript
 │   ├── generateMockData.js # Mock data generator
 │   └── mockDataSchema.js   # Data schema definition
 ├── dist/                   # Production build output
-├── .travis.yml             # Travis CI configuration
 ├── appveyor.yml            # AppVeyor CI configuration
 ├── vite.config.js          # Vite configuration
 ├── vitest.config.js        # Vitest configuration
@@ -132,7 +130,7 @@ See `MODERNIZATION_NOTES.md` for detailed migration information.
 
 This project includes comprehensive CI/CD pipelines that run on multiple platforms and Node.js versions:
 
-### GitHub Actions (Recommended)
+### GitHub Actions (Primary CI/CD)
 
 - **Cross-platform testing**: Ubuntu, Windows, macOS
 - **Multi-version support**: Node.js 18, 20, 22
@@ -142,8 +140,7 @@ This project includes comprehensive CI/CD pipelines that run on multiple platfor
 
 ### Legacy CI Support
 
-- **Travis CI**: Linux builds with Node.js 18, 20, 22
-- **AppVeyor**: Windows builds with the same Node.js versions
+- **AppVeyor**: Windows builds with Node.js 18, 20, 22
 
 ### CI Pipeline Steps
 
@@ -159,7 +156,6 @@ This project includes comprehensive CI/CD pipelines that run on multiple platfor
 All CI configurations are located in:
 
 - `.github/workflows/ci.yml` - GitHub Actions
-- `.travis.yml` - Travis CI
 - `appveyor.yml` - AppVeyor CI
 
 ## 🤝 Contributing

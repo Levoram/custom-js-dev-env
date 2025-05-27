@@ -1,10 +1,8 @@
 # Test against multiple versions of Node.js
 environment:
   matrix:
-    - nodejs_version: '18'
-    - nodejs_version: '20'
     - nodejs_version: '22'
-
+    - nodejs_version: '24'
 # Cache node_modules for faster builds
 cache:
   - node_modules
