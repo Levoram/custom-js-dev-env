@@ -12,6 +12,4 @@
  main.js for the production build.
  */
 
-/* eslint-disable no-unused-vars */
-
-import "whatwg-fetch";
+import 'whatwg-fetch'

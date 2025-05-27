@@ -1,37 +1,37 @@
 const schema = {
-  type: "object",
+  type: 'object',
   properties: {
     users: {
-      type: "array",
+      type: 'array',
       minItems: 3,
       maxItems: 5,
       items: {
-        type: "object",
+        type: 'object',
         properties: {
           id: {
-            type: "integer",
+            type: 'integer',
             unique: true,
             minimum: 1,
             maximum: 700,
           },
           firstName: {
-            type: "string",
-            faker: "name.firstName",
+            type: 'string',
+            faker: 'person.firstName',
           },
           lastName: {
-            type: "string",
-            faker: "name.lastName",
+            type: 'string',
+            faker: 'person.lastName',
           },
           email: {
-            type: "string",
-            faker: "internet.email",
+            type: 'string',
+            faker: 'internet.email',
           },
         },
-        required: ["id", "firstName", "lastName", "email"],
+        required: ['id', 'firstName', 'lastName', 'email'],
       },
     },
   },
-  required: ["users"],
-};
+  required: ['users'],
+}
 
-export { schema };
+export { schema }

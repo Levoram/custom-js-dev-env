@@ -1,23 +1,38 @@
-# Test against this version of Node.js
+# Test against multiple versions of Node.js
 environment:
   matrix:
-    # node.js
-    - nodejs_version: "19"
+    - nodejs_version: '18'
+    - nodejs_version: '20'
+    - nodejs_version: '22'
+
+# Cache node_modules for faster builds
+cache:
+  - node_modules
 
 # Install scripts. (runs after repo cloning)
 install:
-  # Get the latest stable version of Node.js or io.js
+  # Get the latest stable version of Node.js
   - ps: Install-Product node $env:nodejs_version
   # install modules
   - npm install
+
+# Pre-test scripts
+before_test:
+  - npm run generate-mock-data
 
 # Post-install test scripts.
 test_script:
   # Output useful info for debugging.
   - node --version
   - npm --version
+  # run type checking
+  - npm run type-check
+  # run linting
+  - npm run lint
   # run tests
-  - npm test
+  - npm run test
+  # test build
+  - npm run build
 
 # Don't actually build.
 build: false
